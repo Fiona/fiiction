@@ -1,11 +1,11 @@
 """
 Second room
 """
-from fiiction.room.helpers import hCavern
-from fiiction.dir.south import South
+from fiiction.room_helpers import Cavern
+from fiiction.dir import South
 
 
-class second_room(hCavern):
+class second_room(Cavern):
     
     room_name = "another cave"
     
@@ -15,5 +15,5 @@ class second_room(hCavern):
     
     def create_room(self):
         
-        hCavern.create_room(self)        
+        Cavern.create_room(self)        
         self.exits ["south"] = South(self.game.rooms['start_room']);

@@ -1,12 +1,12 @@
 """
 MY STARTING ROOM
 """
-from fiiction.room.helpers import hCavern
-from fiiction.dir.north import North
+from fiiction.room_helpers import Cavern
+from fiiction.dir import North
 
 
 
-class start(hCavern):
+class start(Cavern):
     
     room_name = "a cave"
     
@@ -17,7 +17,7 @@ Don'task me, I just work here..."""
     
     def create_room(self):
         
-        hCavern.create_room(self)        
+        Cavern.create_room(self)        
         self.exits["north"] = North(self.game.rooms['second_room']);
         
         self.things["rock"] = self.game.things["rock"];
